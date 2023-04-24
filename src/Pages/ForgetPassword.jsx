@@ -83,7 +83,7 @@ const ForgetPassword = () => {
                       Forgot Password
                     </button>
                   </div>
-                  {apiResponse}
+                  {/*{apiResponse}*/}
                   {showAlert && (
                     <div className="alert-success" role="alert">
                       Click the reset link sent to your email to reset your
