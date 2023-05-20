@@ -117,7 +117,7 @@ const Register = () => {
 
         try {
 
-            const response = await axios.post("http://localhost:8080/auth/register", {
+            const response = await axios.post("http://13.53.188.15:8080/api/v1/auth/register", {
 
                 fullName: data.fullname,
 

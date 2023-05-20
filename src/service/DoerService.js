@@ -1,10 +1,10 @@
 import axios from "axios";
 
-const GET_ALL_NEW_TASKS = "http://localhost:8080/tasks/new_task";
-const GET_ONGOING_TASKS = "http://localhost:8080/tasks/user/ongoing_task";
-const GET_COMPLETED_TASKS = "http://localhost:8080/tasks/user/completed_task";
-const GET_PENDING_APPROVAL_TASKS = "http://localhost:8080/tasks/user/pending_approval_task";
-const CANCEL_TASK = "http://localhost:8080/tasks/cancel_task";
+const GET_ALL_NEW_TASKS = "http://13.53.188.15:8080/api/v1/tasks/new_task";
+const GET_ONGOING_TASKS = "http://13.53.188.15:8080/api/v1/tasks/user/ongoing_task";
+const GET_COMPLETED_TASKS = "http://13.53.188.15:8080/api/v1/tasks/user/completed_task";
+const GET_PENDING_APPROVAL_TASKS = "http://13.53.188.15:8080/api/v1/tasks/user/pending_approval_task";
+const CANCEL_TASK = "http://13.53.188.15:8080/api/v1/tasks/cancel_task";
 
 
 class DoerService {
@@ -46,7 +46,7 @@ class DoerService {
     }
 
     acceptTask(token, taskId) {
-        return axios.post(`http://localhost:8080/tasks/${taskId}/accept`, "", {
+        return axios.post(`http://13.53.188.15:8080/api/v1/tasks/${taskId}/accept`, "", {
             headers: {
                 Authorization: `Bearer ${token}`,// Add the Bearer token to the headers
             }
@@ -54,7 +54,7 @@ class DoerService {
     }
 
     markTaskForApproval(token, taskId) {
-        return axios.post(`http://localhost:8080/tasks/${taskId}/complete`, "", {
+        return axios.post(`http://13.53.188.15:8080/api/v1/tasks/${taskId}/complete`, "", {
             headers: {
                 Authorization: `Bearer ${token}`,// Add the Bearer token to the headers
             }

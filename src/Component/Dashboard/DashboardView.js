@@ -22,7 +22,7 @@ const View = () => {
                })
         }
         else {
-            axios.get('http://localhost:8080/tasks/new_task')
+            axios.get('http://13.53.188.15:8080/api/v1/tasks/new_task')
                 .then((res) => {
                     setData(res.data.result);
                     console.log(res.data.result);

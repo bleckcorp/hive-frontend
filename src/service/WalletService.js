@@ -1,10 +1,10 @@
 import axios from "axios";
 
-const MAKE_PAYMENT_API_BASE_URL = "http://localhost:8080/transaction/payment";
-const WALLET_WITHDRAWAL_API_BASE_URL = "http://localhost:8080/transaction/transfer";
-const WALLET_BALANCE_API_BASE_URL = "http://localhost:8080/transaction/walletBalance";
-const WALLET_HISTORY_API_BASE_URL = "http://localhost:8080/transaction/history";
-const BANK_LIST_API_BASE_URL = "http://localhost:8080/transaction/banks";
+const MAKE_PAYMENT_API_BASE_URL = "http://13.53.188.15:8080/api/v1/transaction/payment";
+const WALLET_WITHDRAWAL_API_BASE_URL = "http://13.53.188.15:8080/api/v1/transaction/transfer";
+const WALLET_BALANCE_API_BASE_URL = "http://13.53.188.15:8080/api/v1/transaction/walletBalance";
+const WALLET_HISTORY_API_BASE_URL = "http://13.53.188.15:8080/api/v1/transaction/history";
+const BANK_LIST_API_BASE_URL = "http://13.53.188.15:8080/api/v1/transaction/banks";
 
 class WalletService {
     initializePaymentAndGetUrl(data, token) {

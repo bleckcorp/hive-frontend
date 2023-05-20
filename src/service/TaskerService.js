@@ -1,10 +1,10 @@
 import axios from "axios";
 
-const GET_ALL_NEW_TASKS_CREATED = "http://localhost:8080/tasks/fetchTasks/?status=NEW";
-const GET_ONGOING_TASKS = "http://localhost:8080/tasks/fetchTasks/?status=ONGOING";
-const GET_COMPLETED_TASKS = "http://localhost:8080/tasks/fetchTasks/?status=COMPLETED";
-const GET_PENDING_APPROVAL = "http://localhost:8080/tasks/fetchTasks/?status=PENDING_APPROVAL";
-const GET_ALL_TASKS = "http://localhost:8080/transaction/history";
+const GET_ALL_NEW_TASKS_CREATED = "http://13.53.188.15:8080/api/v1/tasks/fetchTasks/?status=NEW";
+const GET_ONGOING_TASKS = "http://13.53.188.15:8080/api/v1/tasks/fetchTasks/?status=ONGOING";
+const GET_COMPLETED_TASKS = "http://13.53.188.15:8080/api/v1/tasks/fetchTasks/?status=COMPLETED";
+const GET_PENDING_APPROVAL = "http://13.53.188.15:8080/api/v1/tasks/fetchTasks/?status=PENDING_APPROVAL";
+const GET_ALL_TASKS = "http://13.53.188.15:8080/api/v1/transaction/history";
 const JWT_TOKEN = localStorage.getItem("token");
 
 class TaskerService {
@@ -44,14 +44,14 @@ class TaskerService {
         });
     }
     approveTask( taskId) {
-        return axios.post(`http://localhost:8080/tasks/${taskId}/approve`, "", {
+        return axios.post(`http://13.53.188.15:8080/api/v1/tasks/${taskId}/approve`, "", {
             headers: {
                 Authorization: `Bearer ${JWT_TOKEN}`,// Add the Bearer token to the headers
             }
         });
     }
     cancelTask(token, taskId) {
-        return axios.post(`http://localhost:8080/tasks/${taskId}/cancel`, "", {
+        return axios.post(`http://13.53.188.15:8080/api/v1/tasks/${taskId}/cancel`, "", {
             headers: {
                 Authorization: `Bearer ${token}`,// Add the Bearer token to the headers
             }

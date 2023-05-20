@@ -20,7 +20,7 @@ function ResendEmailVerification() {
 
         // Call API to send the verification link to the user's email address
         try {
-            const response = await axios.get('http://localhost:8080/auth/resendVerificationToken');
+            const response = await axios.get('http://13.53.188.15:8080/api/v1/auth/resendVerificationToken');
             navigate('/emailVerificationPage')
             console.log(response.data);
 

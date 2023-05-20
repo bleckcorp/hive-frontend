@@ -79,7 +79,7 @@ function CreateJob() {
         const token = localStorage.getItem("token");
         setLoading(true);
         axios
-            .get("http://localhost:8080/transaction/walletBalance", {
+            .get("http://13.53.188.15:8080/api/v1/transaction/walletBalance", {
                 headers: {
                     "Content-type": "application/json",
                     Authorization: `Bearer ${token}`,
@@ -141,7 +141,7 @@ function CreateJob() {
         } else {
             const token = localStorage.getItem("token");
             axios
-                .post("http://localhost:8080/tasks/", taskDto, {
+                .post("http://13.53.188.15:8080/api/v1/tasks/", taskDto, {
                     headers: {
                         "Content-type": "application/json",
                         Authorization: `Bearer ${token}`,

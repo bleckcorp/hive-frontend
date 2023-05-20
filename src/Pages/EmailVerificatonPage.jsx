@@ -13,7 +13,7 @@ const EmailVerificatonPage = ({token}) => {
         const verifyToken = new URLSearchParams(window.location.search).get("token");
         if (verifyToken) {
             axios
-                .get(`http://localhost:8080/auth/verifyRegistration?token=${verifyToken}`)
+                .get(`http://13.53.188.15:8080/api/v1/auth/verifyRegistration?token=${verifyToken}`)
                 .then((response) => {
                     console.log("VERIFICATION IN PROGRESS");
                     if (response.data.isSuccessful === true) {
@@ -35,7 +35,7 @@ const EmailVerificatonPage = ({token}) => {
         // const verifyEmail = async () => {
         //     try {
         //         console.log("VERIFICATION IN PROGRESS");
-        //         const response = await axios.get(`http://localhost:8080/auth/verifyRegistration?token=${verifyToken}`)
+        //         const response = await axios.get(`http://13.53.188.15:8080/api/v1/auth/verifyRegistration?token=${verifyToken}`)
         //         if (response.data.isSuccessful === true) {
         //             verificationStatus = true;
         //         }

@@ -15,7 +15,7 @@ const EmailVerification = () => {
 
         if (verifyToken) {
             axios
-                .get(`http://localhost:8080/auth/verifyRegistration?token=${verifyToken}`)
+                .get(`http://13.53.188.15:8080/api/v1/auth/verifyRegistration?token=${verifyToken}`)
                 .then((response) => {
                     console.log("VERIFICATION IN PROGRESS");
                     if (response.data.isSuccessful === true) {
